@@ -60,54 +60,32 @@ button:disabled { cursor: default; }
 .logo:active img { transform: translateY(2px) scale(.97); }
 .logo:focus-visible { outline: 3px dashed var(--pen); outline-offset: 3px; }
 .logo img { width: 100%; display: block; image-rendering: auto; }
-.title {
-  margin: 0;
-  font-family: var(--pixel);
-  font-weight: 400;
-  font-size: calc(var(--b) * .093);
-  line-height: .95;
-  min-width: 0;
-  letter-spacing: 1px;
-  color: var(--panel);
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-shadow:
-    -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 2px 2px 0 var(--ink),
-     0 -2px 0 var(--ink), 0 2px 0 var(--ink), -2px 0 0 var(--ink), 2px 0 0 var(--ink);
-}
-.title span:last-child { padding-left: .9em; }
-.title b { color: var(--ink); font-weight: 700; }
-.hscore { flex: none; width: calc(var(--b) * .25); text-align: right; }
-.hscore-label {
-  font-family: var(--pixel); font-size: calc(var(--b) * .04); line-height: 1; color: var(--panel);
-  text-shadow: -1.5px -1.5px 0 var(--ink), 1.5px -1.5px 0 var(--ink), -1.5px 1.5px 0 var(--ink), 1.5px 1.5px 0 var(--ink);
-}
+.title { margin: 0; flex: 1; min-width: 0; line-height: 0; }
+.title img { display: block; height: calc(var(--b) * .175); width: auto; max-width: 100%; object-fit: contain; object-position: left center; }
+/* score 글자 위 = 로고 위, 점수 칸 아래 = 로고 아래 */
+.hscore { flex: none; width: calc(var(--b) * .25); height: calc(var(--b) * .18); text-align: right; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+.hscore-label { display: flex; justify-content: flex-end; line-height: 0; }
+.hscore-label img { height: max(18px, calc(var(--b) * .058)); width: auto; }
 .hscore-num {
-  margin-top: 6px; height: calc(var(--b) * .09); background: #fff;
+  margin: 0; height: calc(var(--b) * .09); background: #fff;
   border: 3px solid var(--ink); transform: rotate(-2deg);
   display: grid; place-items: center;
   font-family: var(--digit); font-weight: 700; font-size: calc(var(--b) * .053);
 }
 .hscore-num.bump { animation: pop .5s ease-out; }
-.hscore-sub { margin-top: 4px; font-size: 12px; min-height: 1.2em; white-space: nowrap; }
+.hscore-sub { position: absolute; top: 100%; right: 0; margin-top: 3px; font-size: 11px; white-space: nowrap; }
 
 .deco { position: absolute; z-index: 2; pointer-events: none; font-style: normal; }
-.dot { width: 26px; height: 26px; border-radius: 50%; background: var(--ink); }
-.dot::before { content: ""; position: absolute; inset: -5px; background:
-  radial-gradient(circle, var(--ink) 1.6px, transparent 2px) 50% 0/4px 4px no-repeat,
-  radial-gradient(circle, var(--ink) 1.6px, transparent 2px) 50% 100%/4px 4px no-repeat,
-  radial-gradient(circle, var(--ink) 1.6px, transparent 2px) 0 50%/4px 4px no-repeat,
-  radial-gradient(circle, var(--ink) 1.6px, transparent 2px) 100% 50%/4px 4px no-repeat; }
-.d1 { left: -14px; top: -16px; }
-.d2 { right: 120px; bottom: -14px; width: 18px; height: 18px; }
-.d3 { right: -10px; top: 18px; width: 12px; height: 12px; }
+.dot { width: 32px; height: 32px; background: url("assets/mine.svg") center/contain no-repeat; }
+.d1 { left: -17px; top: -19px; }
+.d2 { right: 120px; bottom: -14px; width: 24px; height: 24px; }
+.d3 { right: -12px; top: 16px; width: 18px; height: 18px; }
 .bar { height: 7px; background: var(--ink); }
 .b1 { left: -28px; top: 40%; width: 22px; }
 .b2 { right: -24px; top: 58%; width: 18px; height: 12px; }
 .sq { width: 18px; height: 18px; background: var(--tile); border: 3px solid; border-color: var(--tile-hi) var(--tile-lo) var(--tile-lo) var(--tile-hi); }
 .s1 { right: 140px; top: -14px; }
-.spark { color: #fff; font-size: 18px; }
+.spark { width: 12px; height: 20px; background: url("assets/sparkle.svg") center/contain no-repeat; }
 .k1 { left: 46px; top: -12px; }
 .k2 { right: 70px; top: -10px; }
 
@@ -166,7 +144,7 @@ button:disabled { cursor: default; }
   position: relative;
   width: var(--b);
 }
-.board-wrap::before { content: ""; position: absolute; left: -14px; bottom: 10%; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); }
+.board-wrap::before { content: ""; position: absolute; left: -16px; bottom: 10%; width: 28px; height: 28px; background: url("assets/mine.svg") center/contain no-repeat; }
 .board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
