@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search! Mark!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css">
+<link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+<main class="sheet">
+
+  <!-- 헤더: 보드판 위쪽 -->
+  <header class="head">
+    <i class="deco dot d1"></i><i class="deco dot d2"></i><i class="deco dot d3"></i>
+    <i class="deco bar b1"></i><i class="deco bar b2"></i><i class="deco sq s1"></i>
+    <i class="deco spark k1">✦</i><i class="deco spark k2">✦</i>
+    <div class="head-in">
+      <button class="logo" id="btnNew" title="새 게임" aria-label="새 게임"><img src="assets/logo.png" alt=""></button>
+      <h1 class="title"><span>se<b>a</b>rch!</span><span>Mar<b>k</b>!</span></h1>
+      <div class="hscore" aria-live="polite">
+        <div class="hscore-label">score</div>
+        <div class="hscore-num" id="scoreNum">0</div>
+        <div class="hscore-sub" id="scoreSub"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="play">
+    <!-- 왼쪽 세로줄: 주사위 + 아이템 -->
+    <aside class="side">
+      <section class="tray">
+        <button class="die-btn" id="dieBtn" aria-label="주사위 굴리기">
+          <div class="die-shadow"></div>
+          <div class="die" id="die"></div>
+        </button>
+        <div class="tray-info">
+          <div class="value-line" id="valueLine"></div>
+          <button class="act ghost" id="btnUndo" title="되돌리기 (⌘Z)" aria-label="되돌리기"><svg class="undo-ico" viewBox="0 0 9 8" shape-rendering="crispEdges" fill="currentColor" aria-hidden="true"><rect x="2" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="0" y="2" width="7" height="1"/><rect x="1" y="3" width="2" height="1"/><rect x="7" y="3" width="1" height="3"/><rect x="2" y="4" width="1" height="1"/><rect x="3" y="6" width="4" height="1"/><rect x="6" y="5" width="1" height="1"/></svg><span class="undo-txt">되돌리기</span></button>
+        </div>
+        <p class="hint" id="hint"></p>
+      </section>
+      <div class="items" id="items" aria-label="아이템 (눌러서 사용)"></div>
+    </aside>
+
+    <!-- 오른쪽: 5×5 판 -->
+    <div class="board-wrap">
+      <div class="board" id="board" aria-label="게임판"></div>
+    </div>
+  </section>
+
+
+
+  <footer class="foot"><div class="marquee"><span>search! Mark! search! Mark! search! Mark! search! Mark! search! Mark! search! Mark! </span><span>search! Mark! search! Mark! search! Mark! search! Mark! search! Mark! search! Mark! </span></div></footer>
+  <div class="bottom-bar">
+    <button class="link" id="btnRules">룰 보기</button>
+  </div>
+</main>
+
+<!-- 모달 -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-card" id="modalCard"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="game.js?v=13"></script>
+</body>
+</html>

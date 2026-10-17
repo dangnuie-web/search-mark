@@ -1,0 +1,41 @@
+MIT License
+
+Copyright (c) 2026 Dangnee
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+Exception: game, logo and artwork (게임·로고·그림 예외)
+
+The MIT License above covers the source code only (index.html, style.css,
+game.js). It does NOT cover:
+
+- the board game "Search! Mark!" itself — its rules, rulebook and board design
+- the logo (assets/logo.png) and the title lettering
+- the board, dice and item artwork as a visual design
+
+These remain (c) 2026 Dangnee, all rights reserved. You may play the game and
+read the code, but please do not reuse the game, logo or artwork in your own
+products or publish modified copies of the game under its name.
+
+Fonts are loaded from Google Fonts (Pixelify Sans, Silkscreen, DotGothic16)
+and jsDelivr (Galmuri). They are not included in this repository and are
+distributed under the SIL Open Font License 1.1 by their authors.
+
+만든 사람: Dangnee(당니) · github.com/dangnuie-web · dangnuie@gmail.com
