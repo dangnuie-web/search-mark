@@ -23,8 +23,10 @@ body {
   color: var(--ink);
   font-family: var(--kr);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
+  align-items: center;          /* 창이 판보다 크면 위아래 여백을 같게 */
   -webkit-font-smoothing: none;
 }
 button { font: inherit; color: inherit; cursor: pointer; }
@@ -39,7 +41,7 @@ button:disabled { cursor: default; }
   --gap: calc(var(--b) * .043);
   --play-w: calc(var(--side) + var(--gap) + var(--b));
   width: min(1080px, 100%);
-  padding: 30px 16px 12px;
+  padding: 24px 16px;
   position: relative;
 }
 
